@@ -9,6 +9,9 @@ export default function Home() {
   const goToPdfPage = () => {
     redirect('/pdf');
   };
+  const goTOSendEMail = () =>{
+    redirect('/sendEmail');
+  }
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 gap-16 sm:p-20 font-sans">
@@ -29,6 +32,7 @@ export default function Home() {
             >
               Go to PDFs
             </button>
+            <button onClick={goTOSendEMail} className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Send an Email</button>
             <button
               onClick={() => signOut()}
               className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition"
